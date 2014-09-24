@@ -1,0 +1,4 @@
+simpleNews
+==========
+
+test site
