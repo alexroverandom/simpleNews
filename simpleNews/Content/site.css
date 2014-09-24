@@ -1,0 +1,49 @@
+﻿body {   
+    margin: 0 auto;
+    width: 800px;
+    align-self:center
+}
+
+footer {
+    background-color: lightgray;
+    text-align:center
+}
+
+.nav {
+    background-color: darkslateblue;
+}
+
+.nav a {
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 20pt;
+    font-family: 'Times New Roman'
+}
+
+    .nav a:hover {
+        color: white;
+    }
+
+li {
+    color: grey;
+}
+
+li a {
+    font-size : 16pt;
+    color: black;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: darkblue;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.validation-error {
+    color: red;
+}

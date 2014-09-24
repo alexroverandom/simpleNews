@@ -1,0 +1,16 @@
+﻿@model IEnumerable<simpleNews.Models.Article>
+
+<h2>Our News</h2>
+
+<p>Count: @Model.Count()</p>
+
+<ul>
+    @foreach (var article in Model)
+    {
+        <li>
+            @Html.ActionLink(article.Title, "Details", new { id = article.Id })
+            <br><i>@article.Date.Date.ToShortDateString() @article.Date.Date.ToShortTimeString() - @article.Author</i><br />
+            @article.Type<hr />
+        </li>
+    }
+</ul>

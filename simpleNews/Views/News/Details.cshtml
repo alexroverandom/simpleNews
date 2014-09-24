@@ -1,0 +1,10 @@
+﻿@model simpleNews.Models.Article
+
+@Html.ActionLink("back to news", "Index", "News")
+<br />
+<h3>@Model.Title</h3>
+<i>@Model.Author - @Model.Date</i><br />
+
+<p>@Model.Body</p>
+<hr />
+<p><i>@Model.Type</i></p>
