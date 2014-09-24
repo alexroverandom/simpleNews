@@ -1,0 +1,18 @@
+﻿@model simpleNews.Models.Article
+
+<div>
+    <hr />
+    <h3>@Model.Title</h3>
+
+    <i>@Model.Date.ToLongDateString() - @Model.Author</i>
+    <br />
+    <p>@Model.Body</p>
+    <p>Type: @Model.Type</p>
+</div>
+<p>
+    @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "add-new", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })
+    @Ajax.ActionLink("Delete", "Delete", new { id = Model.Id }, new AjaxOptions { OnSuccess = "clearBox('add-new')", UpdateTargetId = "all-news-container", InsertionMode = InsertionMode.Replace, HttpMethod = "POST" })
+</p>
+<input type="button" id="btnUndo" value="Cancel" onclick="clearBox('add-new')" />
+<hr />
+

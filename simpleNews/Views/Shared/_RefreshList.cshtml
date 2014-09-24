@@ -1,0 +1,18 @@
+﻿@model IEnumerable<simpleNews.Models.Article>
+
+
+<p>Count: @Model.Count()</p>
+<ul>
+    @foreach (var article in Model)
+    {
+        <li class="simple-article">
+            @Ajax.ActionLink(article.Title,
+                "Details",
+                new { id = article.Id },
+                new AjaxOptions { InsertionMode = InsertionMode.Replace, HttpMethod = "GET", UpdateTargetId = "add-new" })<br />
+            @article.Date.ToShortDateString() @article.Date.ToShortTimeString() - @article.Author<br />
+            @article.Type<hr />
+        </li>
+    }
+</ul>
+

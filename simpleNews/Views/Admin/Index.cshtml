@@ -1,0 +1,19 @@
+﻿@model IEnumerable<simpleNews.Models.Article>
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Try to manage our news :)</h2>
+
+
+@Ajax.ActionLink("New article", "Create", new AjaxOptions { InsertionMode = InsertionMode.Replace, HttpMethod = "GET", UpdateTargetId = "add-new" })
+<div id="add-new"></div>
+
+<div id="edit-container"></div>
+
+<div id="all-news-container">
+    @Html.Partial("_RefreshList")
+</div>
+
+
